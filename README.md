@@ -15,7 +15,7 @@ Geo stats visualization
 ![Geo stats visualization](/Documentation/GeoStats%20Example.gif)
 
 Technical drawing checklist
-![Technical drawing checklist](Documentation/Technical%20Drawing%20Example.gif =250x)
+![Technical drawing checklist](Documentation/Technical%20Drawing%20Example.gif)
 
 ## How to use
 
@@ -26,7 +26,7 @@ After adding the control to your canvas app you must configure the following:
 SVG property - Insert your SVG drawing inline or add it via data source
 Make sure the relevant elements have the properties ***id*** and ***class*** set correctly. See hydraulicram below for an example.
 
-Example (Technical Drawing SVG):
+Example (Technical Drawing SVG (shortened for readability)):
 
 ```html:
     <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' id='svg' version='1.0'> 
@@ -71,9 +71,11 @@ The configured dataset should include fields that can be mapped to the ***id*** 
 
 Example (Technical Drawing dataset)
 
-`ClearCollect(parts,`
+```html:
 
-    `{ number: 1, part: "Hydraulic ram", objname: "hydraulicram", fillColor: "#ffffff" },`
+ClearCollect(parts,
+
+    { number: 1, part: "Hydraulic ram", objname: "hydraulicram", fillColor: "#ffffff" },
 
     { number: 2, part: "Hinge mechanism", objname: "hingemechanism", fillColor: "#ffffff" },
 
@@ -86,3 +88,5 @@ Example (Technical Drawing dataset)
     { number: 6, part: "Wing", objname: "wing", fillColor: "#ffffff" }
 
 )
+
+```

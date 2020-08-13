@@ -23,6 +23,8 @@ export class SVGControl implements ComponentFramework.StandardControl<IInputs, I
 	private zoomLevel = 1;
 	private zoomToId: string;
 
+	private tscale = 2;
+
 	private _notifyOutputChanged: () => void;
 	/**
 	 * Empty constructor.
@@ -129,6 +131,12 @@ export class SVGControl implements ComponentFramework.StandardControl<IInputs, I
 
 		//reset zoom
 		this.reset();
+
+		if(this.contextObj.parameters.scale != null) {
+			if(this.contextObj.parameters.scale.raw != null) {
+				this.tscale = this.contextObj.parameters.scale.raw;
+			}
+		}
 
 		// Zoom to SVG element if configured
 		if(this.contextObj.parameters.zoomToId != null) {
@@ -237,8 +245,8 @@ export class SVGControl implements ComponentFramework.StandardControl<IInputs, I
 				// the new scale
 				let scale = bbox.width*matrix.a/this.vbox[2] * (6 - this.zoomLevel);
 
-				let scaled_offset_x = absolute_offset_x + this.vbox[2]*(1-scale)/2;
-				let scaled_offset_y = absolute_offset_y + this.vbox[3]*(1-scale)/2;
+				let scaled_offset_x = absolute_offset_x + this.vbox[2]*(1-scale)/this.tscale; //tscale = 2
+				let scaled_offset_y = absolute_offset_y + this.vbox[3]*(1-scale)/this.tscale; //tscale = 2;
 				let scaled_width = this.vbox[2]*scale;
 				let scaled_height = this.vbox[3]*scale;
 

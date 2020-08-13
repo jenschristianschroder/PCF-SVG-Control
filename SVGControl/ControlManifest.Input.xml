@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="PowerAppsGuy" constructor="SVGControl" version="0.0.1" display-name-key="SVGControl" description-key="SVGControl description" control-type="standard">
+  <control namespace="PowerAppsGuy" constructor="SVGControl" version="0.0.2" display-name-key="SVGControl" description-key="SVGControl description" control-type="standard">
     <property name="svg" display-name-key="svg_Display_Key" description-key="SVG content" of-type="Multiple" usage="input" required="true" />
     <property name="zoomLevel" display-name-key="zoomLevl_Display_Key" description-key="Zoom level" of-type="Whole.None" usage="input" required="true" />
     <data-set name="dataSet" display-name-key="SVG Elements Configurations">
@@ -8,6 +8,7 @@
       <property-set name="fill" display-name-key="Fill_Display_Key" description-key="SVG element fill" of-type="SingleLine.Text" usage="bound" required="true" />
     </data-set>
     <property name="zoomToId" display-name-key="zoomToId_Display_Key" description-key="Zoom to id" of-type="SingleLine.Text" usage="input" required="true" />
+    <property name="scale" display-name-key="scale_Display_Key" description-key="scale" of-type="Whole.None" usage="input" required="true" />
     <resources>
       <code path="index.ts" order="1"/>
       <!-- UNCOMMENT TO ADD MORE RESOURCES

@@ -32,7 +32,7 @@ Make sure the relevant elements have the properties ***id*** and ***class*** set
 Example (Technical Drawing SVG (shortened for readability)):
 
 ```html:
-    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' id='svg' version='1.0'> 
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 600' id='svg' version='1.0'>
 
         <g id='layer1'>
 
@@ -93,3 +93,9 @@ ClearCollect(parts,
 )
 
 ```
+
+## Known issues
+
+In some scenarios the Zoom feature behaves in mysterious ways and will zoom outside of the SVG.
+
+You are more than welcome to contribute and help with fixing the zoom feature or anything else you feel needs updating.

@@ -8,13 +8,16 @@ The SVG drawing is manipulated via the id and class tags on the SVG elements.
 
 ## Examples
 
-Floor plan seat allocation
+### Floor plan seat allocation
+
 ![Floor plan seat allocation](/Documentation/Back%20to%20work%20Example.gif)
 
-Geo stats visualization
+### Geo stats visualization
+
 ![Geo stats visualization](/Documentation/GeoStats%20Example.gif)
 
-Technical drawing checklist
+### Technical drawing checklist
+
 ![Technical drawing checklist](Documentation/Technical%20Drawing%20Example.gif)
 
 ## How to use
